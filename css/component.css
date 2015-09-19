@@ -1,0 +1,88 @@
+.enlightenment-card {
+	position: relative;
+	margin: 3em auto 5em auto;
+	max-width: 800px;
+	width: 100%;
+	min-height: 400px;
+}
+
+.enlightenment-card .enlightenment-card-content {
+	position: absolute;
+	min-height: 200px;
+	border-top: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+	padding: 2em 0;
+	top: 0;
+	z-index: 0;
+	opacity: 0;
+	width: 100%;
+}
+
+.no-js .enlightenment-card .enlightenment-card-content {
+	border-bottom: none;
+}
+
+.enlightenment-card .enlightenment-card-content.enlightenment-card-current,
+.no-js .enlightenment-card .enlightenment-card-content {
+	position: relative; 
+	z-index: 100;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.enlightenment-card .enlightenment-card-content:before,
+.enlightenment-card .enlightenment-card-content:after {
+	content: " ";
+	display: table;
+}
+
+.enlightenment-card .enlightenment-card-content:after {
+	clear: both;
+}
+
+.enlightenment-card-progress {
+	position: absolute;
+	background: #47a3da;
+	height: 1px;
+	width: 0%;
+	top: 0;
+	z-index: 1000;
+}
+
+.enlightenment-card blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+.enlightenment-card blockquote p {
+	font-size: 2em;
+	color: #888;
+	font-weight: 300;
+	margin: 0.4em 0 1em;
+}
+
+.enlightenment-card blockquote footer {
+	font-size: 1.2em;
+}
+
+.enlightenment-card blockquote footer:before {
+	content: '― ';
+}
+
+.enlightenment-card .enlightenment-card-content img {
+	float: right;
+	margin-left: 3em;
+}
+
+/* Example for media query */
+@media screen and (max-width: 30.6em) { 
+
+	.enlightenment-card {
+		font-size: 70%;
+	}
+
+	.enlightenment-card img {
+		width: 80px;
+	}
+
+}
